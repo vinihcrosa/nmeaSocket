@@ -1,0 +1,43 @@
+{
+  "name": "nmeasocket",
+  "version": "1.0.0",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage --coverage.reporter=lcov",
+    "test:watch": "vitest",
+    "prepare": "husky",
+    "release": "release-it"
+  },
+  "keywords": [
+    "typescript",
+    "library",
+    "nmea"
+  ],
+  "author": "Vinicius Rosa",
+  "license": "MIT",
+  "description": "",
+  "dependencies": {
+    "client-nmea-socket-to-event": "^1.1.6",
+    "socketstream2event": "^1.1.0"
+  },
+  "devDependencies": {
+    "@commitlint/cli": "^19.8.1",
+    "@commitlint/config-conventional": "^19.8.1",
+    "@release-it/conventional-changelog": "^10.0.1",
+    "@types/node": "^22.15.21",
+    "@vitest/coverage-istanbul": "^3.1.4",
+    "husky": "^9.1.7",
+    "release-it": "^19.0.2",
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.3",
+    "vitest": "^3.1.4"
+  }
+}
