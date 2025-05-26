@@ -40,7 +40,7 @@ export class NmeaSocket extends EventEmitter {
     this.socket.addListener(header, cb)
   }
 
-  public addNmeaListenerOnChange(header: string, cb: Function) {
+  public addNmeaListenerOnChange(header: string, cb: (data: NmeaResponse) => void) {
 
     this.socket.addListener(header, cb)
   }
