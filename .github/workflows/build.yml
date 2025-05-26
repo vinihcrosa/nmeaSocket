@@ -1,0 +1,25 @@
+name: build.yml
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  sonarqube:
+    name: SonarQube
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - name: Install Deoendencies
+        run: npm install
+      - name: Test and Coverage
+        run: npm run test:coverage
+      - name : SonarQube Scan
+        uses: SonarSource/sonarqube-scan-action@v4
+        env:
+          SONAR_TOKEN: ${{ secrets. SONARCLOUD_TOKEN }}
