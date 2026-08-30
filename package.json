@@ -5,7 +5,8 @@
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
   "files": [
-    "dist"
+    "dist",
+    "README.md"
   ],
   "scripts": {
     "build": "tsup",
@@ -19,11 +20,25 @@
   "keywords": [
     "typescript",
     "library",
-    "nmea"
+    "nmea",
+    "nmea-0183",
+    "tcp",
+    "socket",
+    "gps",
+    "marine",
+    "ais"
   ],
   "author": "Vinicius Rosa",
   "license": "MIT",
-  "description": "",
+  "description": "TypeScript client for reading and writing NMEA 0183 sentences over TCP, with per-sentence listeners and automatic reconnection.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vinihcrosa/nmeaSocket.git"
+  },
+  "homepage": "https://github.com/vinihcrosa/nmeaSocket#readme",
+  "bugs": {
+    "url": "https://github.com/vinihcrosa/nmeaSocket/issues"
+  },
   "dependencies": {
     "client-nmea-socket-to-event": "^1.1.6",
     "socketstream2event": "^1.1.0"
